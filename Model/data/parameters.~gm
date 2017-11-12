@@ -1,0 +1,143 @@
+*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
+* #1 Parameters   (all parameters are declared in terms of generic sets)
+*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
+
+Parameters
+cropnutrientsdata
+labourdata
+prodparams
+startfeed
+feedsupply
+startlivestock
+nutrientparam
+transferrate
+maintenanceExpense
+mortality
+diets
+prices_lives
+prices_milk
+prices_meat
+prices_feed
+;
+
+
+
+$call "gdxxrw.exe data/livestockdata.xlsx o=data/livestockdata.gdx index=index!A3"
+$GDXIN "data/livestockdata.gdx"
+$LOAD cropnutrientsdata
+$LOAD labourdata
+$LOAD prodparams
+$LOAD startfeed
+$LOAD feedsupply
+$LOAD startlivestock
+$LOAD maintenanceExpense
+$LOAD mortality
+$LOAD diets
+$LOAD prices_lives
+$LOAD prices_milk
+$LOAD prices_meat
+$LOAD prices_feed
+$GDXIN
+
+
+
+
+
+
+Parameters
+* crop nutrient data
+*  p_nutcontent(anut,feed)                   'net and gross energy content per kg feed in MJ, % metabolizable and % crude protein of feed, %dry matter of feed'
+
+* demographic data
+  p_rateFert(aaact,type,inten)              'fertility rate, young born per female adult per month'
+  p_mreprodf(aaact,type,inten)              'number of males reproduction animals per female breeder'
+  p_sexratio(aaact,type,inten)              'birth ratio male and female'
+  p_survivalrate(aaact,type,inten)          'survival rate,% of livestock that survive each year'
+  p_grad(aaact,type,inten)                  'months in class, used for livestock dynamics, for example a young animal is in young class for X months, the moves to weaner class (aaact)'
+  p_mort(aaact,type,minten)
+  p_transferrate
+* starting livestock numbers
+  p_startingquantity(hh,aaact,type,inten)         'starting livestock numbers'
+  v0_aactLev(hh,aaact,type,inten,minten)          parameter used to specify livestock numbers in 1st period of each iteration
+* starting feed balance
+  p_s(hh,feed)                              'starting feed balance in kg'
+
+* annual feed supply
+  p_feedSupply(hh,feed)                     'annual feed supply (for specific month of year (harvest month)) in kg'
+
+* labour demand
+  p_labour (m,inten,aaact,type)             'labour demand for each activity in each season and intensification level across households'
+
+* diet specification
+  p_fdcons(hh,aaact,type,inten,y,m,feed)    'diet (kg intake per hd per d)'
+* productivity data
+  p_milkprod(aaact,type,inten)
+  p_salesw(aaact,type,inten)
+
+* prices
+  p_milkPrice
+  p_meatPrice
+  p_salesPrice(hh,aaact)
+  p_purchPrice(hh,aaact)
+  p_labourPrice(hh)
+*  p_buyPrice(aaact,type,inten)                   'buy price of livestock'
+
+* barn/pen or pasture constraint
+  p_LivesCapacity(hh)                       'total holding capacity for livestock'
+
+* maintenance expense
+  p_maintExpense(hh,aaact,type,minten)
+  p_feedPrice(feed) feed prices (for purchased feeds) in MK per kg
+;
+
+*   ---- writing down model parameters
+*p_nutcontent(anut,feed)=cropnutrientsdata(anut,feed);
+
+
+* fertility (calving) rate of adult females *****
+p_rateFert(aaact,type,inten)=  prodparams (aaact,type,inten,'p_rateFert');
+*
+p_mreprodf(aaact,type,inten)=  prodparams (aaact,type,inten,'p_mreprodf');
+* ratio of male to female reproductive animals (assumed 0.5)
+p_sexratio(aaact,type,inten)=  prodparams (aaact,type,inten,'p_sexratio');
+
+* rate at which animals graduate to new class
+p_grad(aaact,type,inten)=prodparams (aaact,type,inten,'graduatetonextclass');
+* mortality rate
+p_mort(aaact,type,minten)=mortality(aaact,type,minten) ;
+p_transferrate=1;
+
+* livestock numbers
+v0_aactLev(hh,aaact,type,inten,minten)=startlivestock(hh,aaact,type,inten,minten,'startvalue');
+
+*p_s(hh,feed)= startfeed(hh,feed, 'p_s');
+
+*annual feed supply
+p_feedSupply(hh,feed)=feedsupply(hh,feed);
+
+p_labour(m,inten,aaact,type)=  labourdata(m,inten,aaact,type);
+
+p_fdcons(hh,aaact,type,inten,y,m,feed)=diets(aaact,type,inten,feed);
+
+p_milkprod(adultf,type,inten)=prodparams (adultf,type,inten,'milkprod');
+p_salesw(aaact,type,inten)= prodparams (aaact,type,inten,'fnweight');
+
+* prices
+p_milkPrice=  prices_milk;
+p_meatPrice=   prices_meat;
+p_feedPrice(feed)=  prices_feed(feed);
+
+p_salesPrice(hh,aaact)=prices_lives(hh,aaact,'sell') ;
+p_purchPrice(hh,aaact)=prices_lives(hh,aaact,'buy') ;
+p_labourPrice(hh)= 1;
+
+p_LivesCapacity(hh)=5;
+p_maintExpense(hh,aaact,type,minten)= maintenanceExpense(hh,aaact,type,minten);
+
+
+
+
+
+
+
+

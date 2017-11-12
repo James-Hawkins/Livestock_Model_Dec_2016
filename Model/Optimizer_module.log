@@ -1,0 +1,482 @@
+
+--- Job Optimizer_module.gms Start 11/12/17 08:26:21 WEX-VS8 23.5.1 x86/MS Windows        
+GAMS Rev 235  Copyright (C) 1987-2010 GAMS Development. All rights reserved
+Licensee: Gary Goldstein                                 G010614:2121CA-WIN
+          Decision Ware, Inc.                                        DC2807
+--- Starting compilation
+--- Optimizer_module.gms(12) 2 Mb
+--- .settings.gms(23) 2 Mb
+--- Optimizer_module.gms(15) 2 Mb
+--- .set_definitions.gms(54) 3 Mb
+--- Optimizer_module.gms(18) 3 Mb
+--- .parameters.gms(25) 3 Mb
+--- call gdxxrw.exe data/livestockdata.xlsx o=data/livestockdata.gdx index=index!A3
+
+GDXXRW           Jul  4, 2010 23.5.1 WIN 18414.18495 VS8 x86/MS Windows       
+Input file : C:\Users\Gaming\Documents\Github\Livestock_Model_Dec2016\Model\data\livestockdata.xlsx
+Output file: C:\Users\Gaming\Documents\Github\Livestock_Model_Dec2016\Model\data\livestockdata.gdx
+Substituting Index
+Total time = 265 Ms
+--- .parameters.gms(26) 3 Mb
+--- GDXin=C:\Users\Gaming\Documents\Github\Livestock_Model_Dec2016\Model\data/livestockdata.gdx
+--- .parameters.gms(143) 3 Mb
+--- Optimizer_module.gms(21) 3 Mb
+--- .livestock_module.gms(176) 3 Mb
+--- Optimizer_module.gms(24) 3 Mb
+--- .demographic_module.gms(381) 3 Mb
+--- Optimizer_module.gms(27) 3 Mb
+--- .Scenario_Module.gms(32) 3 Mb
+--- Optimizer_module.gms(244) 3 Mb
+--- Starting execution: elapsed 0:00:00.295
+--- Optimizer_module.gms(912) 12 Mb
+--- Generating NLP model livesMod
+--- Optimizer_module.gms(949) 14 Mb
+--- LOOPS y2 = 1
+---   3,353 rows  12,677 columns  21,491 non-zeroes
+---   1 nl-code  0 nl-non-zeroes
+--- Optimizer_module.gms(949) 13 Mb
+--- Executing CONOPT: elapsed 0:00:00.399
+--- Optimizer_module.gms(949) 13 Mb
+C O N O P T 3    Jul  4, 2010 23.5.1 WIN 18414.18495 VS8 x86/MS Windows    
+ 
+ 
+    C O N O P T 3   version 3.14U
+    Copyright (C)   ARKI Consulting and Development A/S
+                    Bagsvaerdvej 246 A
+                    DK-2880 Bagsvaerd, Denmark
+ 
+ Using default options.
+ 
+ Reading Data
+ 
+   Iter Phase Ninf   Infeasibility   RGmax    NSB   Step InItr MX OK
+      0   0        2.2654073565E+05 (Input point)
+                                Pre-triangular equations:     3029
+                                Post-triangular equations:     324
+      1   0        0.0000000000E+00 (After pre-processing)
+      2   0        0.0000000000E+00 (After scaling)
+ 
+ ** Feasible solution. Value of objective =    10.0000000000
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+      3   3        1.0000000000E+01 0.0E+00     0 0.0E+00    0 F  T
+      4   3        1.0000000000E+01 0.0E+00     0
+ 
+ ** Optimal solution. There are no superbasic variables.
+ 
+--- Restarting execution
+--- Optimizer_module.gms(949) 0 Mb
+--- Reading solution for model livesMod
+--- Optimizer_module.gms(949) 11 Mb
+--- Executing after solve: elapsed 0:00:00.630
+--- Optimizer_module.gms(912) 11 Mb
+--- Generating NLP model livesMod
+--- Optimizer_module.gms(949) 14 Mb
+--- LOOPS y2 = 2
+---   3,353 rows  12,677 columns  21,491 non-zeroes
+---   1 nl-code  0 nl-non-zeroes
+--- Optimizer_module.gms(949) 12 Mb
+--- Executing CONOPT: elapsed 0:00:00.668
+--- Optimizer_module.gms(949) 12 Mb
+C O N O P T 3    Jul  4, 2010 23.5.1 WIN 18414.18495 VS8 x86/MS Windows    
+ 
+ 
+    C O N O P T 3   version 3.14U
+    Copyright (C)   ARKI Consulting and Development A/S
+                    Bagsvaerdvej 246 A
+                    DK-2880 Bagsvaerd, Denmark
+ 
+ Using default options.
+ 
+ Reading Data
+ 
+   Iter Phase Ninf   Infeasibility   RGmax    NSB   Step InItr MX OK
+      0   0        1.2186493841E+01 (Input point)
+                                Pre-triangular equations:     3029
+                                Post-triangular equations:     324
+      1   0        0.0000000000E+00 (After pre-processing)
+      2   0        0.0000000000E+00 (After scaling)
+ 
+ ** Feasible solution. Value of objective =    10.0000000000
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+      3   3        1.0000000000E+01 0.0E+00     0 0.0E+00    0 F  T
+      4   3        1.0000000000E+01 0.0E+00     0
+ 
+ ** Optimal solution. There are no superbasic variables.
+ 
+--- Restarting execution
+--- Optimizer_module.gms(949) 0 Mb
+--- Reading solution for model livesMod
+--- Executing after solve: elapsed 0:00:00.873
+--- Optimizer_module.gms(912) 11 Mb
+--- Generating NLP model livesMod
+--- Optimizer_module.gms(949) 14 Mb
+--- LOOPS y2 = 3
+---   3,353 rows  12,677 columns  21,491 non-zeroes
+---   1 nl-code  0 nl-non-zeroes
+--- Optimizer_module.gms(949) 12 Mb
+--- Executing CONOPT: elapsed 0:00:00.915
+--- Optimizer_module.gms(949) 12 Mb
+C O N O P T 3    Jul  4, 2010 23.5.1 WIN 18414.18495 VS8 x86/MS Windows    
+ 
+ 
+    C O N O P T 3   version 3.14U
+    Copyright (C)   ARKI Consulting and Development A/S
+                    Bagsvaerdvej 246 A
+                    DK-2880 Bagsvaerd, Denmark
+ 
+ Using default options.
+ 
+ Reading Data
+ 
+   Iter Phase Ninf   Infeasibility   RGmax    NSB   Step InItr MX OK
+      0   0        1.1641532183E-10 (Input point)
+                                Pre-triangular equations:     3029
+                                Post-triangular equations:     324
+      1   0        0.0000000000E+00 (After pre-processing)
+      2   0        0.0000000000E+00 (After scaling)
+ 
+ ** Feasible solution. Value of objective =    10.0000000000
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+      3   3        1.0000000000E+01 0.0E+00     0 0.0E+00    0 F  T
+      4   3        1.0000000000E+01 0.0E+00     0
+ 
+ ** Optimal solution. There are no superbasic variables.
+ 
+--- Restarting execution
+--- Optimizer_module.gms(949) 0 Mb
+--- Reading solution for model livesMod
+--- Executing after solve: elapsed 0:00:01.094
+--- Optimizer_module.gms(912) 11 Mb
+--- Generating NLP model livesMod
+--- Optimizer_module.gms(949) 14 Mb
+--- LOOPS y2 = 4
+---   3,353 rows  12,677 columns  21,491 non-zeroes
+---   1 nl-code  0 nl-non-zeroes
+--- Optimizer_module.gms(949) 12 Mb
+--- Executing CONOPT: elapsed 0:00:01.132
+--- Optimizer_module.gms(949) 12 Mb
+C O N O P T 3    Jul  4, 2010 23.5.1 WIN 18414.18495 VS8 x86/MS Windows    
+ 
+ 
+    C O N O P T 3   version 3.14U
+    Copyright (C)   ARKI Consulting and Development A/S
+                    Bagsvaerdvej 246 A
+                    DK-2880 Bagsvaerd, Denmark
+ 
+ Using default options.
+ 
+ Reading Data
+ 
+   Iter Phase Ninf   Infeasibility   RGmax    NSB   Step InItr MX OK
+      0   0        1.1641532183E-10 (Input point)
+                                Pre-triangular equations:     3029
+                                Post-triangular equations:     324
+      1   0        0.0000000000E+00 (After pre-processing)
+      2   0        0.0000000000E+00 (After scaling)
+ 
+ ** Feasible solution. Value of objective =    10.0000000000
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+      3   3        1.0000000000E+01 0.0E+00     0 0.0E+00    0 F  T
+      4   3        1.0000000000E+01 0.0E+00     0
+ 
+ ** Optimal solution. There are no superbasic variables.
+ 
+--- Restarting execution
+--- Optimizer_module.gms(949) 0 Mb
+--- Reading solution for model livesMod
+--- Executing after solve: elapsed 0:00:01.355
+--- Optimizer_module.gms(912) 11 Mb
+--- Generating NLP model livesMod
+--- Optimizer_module.gms(949) 14 Mb
+--- LOOPS y2 = 5
+---   3,353 rows  12,677 columns  21,491 non-zeroes
+---   1 nl-code  0 nl-non-zeroes
+--- Optimizer_module.gms(949) 12 Mb
+--- Executing CONOPT: elapsed 0:00:01.406
+--- Optimizer_module.gms(949) 12 Mb
+C O N O P T 3    Jul  4, 2010 23.5.1 WIN 18414.18495 VS8 x86/MS Windows    
+ 
+ 
+    C O N O P T 3   version 3.14U
+    Copyright (C)   ARKI Consulting and Development A/S
+                    Bagsvaerdvej 246 A
+                    DK-2880 Bagsvaerd, Denmark
+ 
+ Using default options.
+ 
+ Reading Data
+ 
+   Iter Phase Ninf   Infeasibility   RGmax    NSB   Step InItr MX OK
+      0   0        1.1641532183E-10 (Input point)
+                                Pre-triangular equations:     3029
+                                Post-triangular equations:     324
+      1   0        0.0000000000E+00 (After pre-processing)
+      2   0        0.0000000000E+00 (After scaling)
+ 
+ ** Feasible solution. Value of objective =    10.0000000000
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+      3   3        1.0000000000E+01 0.0E+00     0 0.0E+00    0 F  T
+      4   3        1.0000000000E+01 0.0E+00     0
+ 
+ ** Optimal solution. There are no superbasic variables.
+ 
+--- Restarting execution
+--- Optimizer_module.gms(949) 0 Mb
+--- Reading solution for model livesMod
+--- Executing after solve: elapsed 0:00:01.627
+--- Optimizer_module.gms(912) 11 Mb
+--- Generating NLP model livesMod
+--- Optimizer_module.gms(949) 14 Mb
+--- LOOPS y2 = 6
+---   3,353 rows  12,677 columns  21,491 non-zeroes
+---   1 nl-code  0 nl-non-zeroes
+--- Optimizer_module.gms(949) 12 Mb
+--- Executing CONOPT: elapsed 0:00:01.670
+--- Optimizer_module.gms(949) 12 Mb
+C O N O P T 3    Jul  4, 2010 23.5.1 WIN 18414.18495 VS8 x86/MS Windows    
+ 
+ 
+    C O N O P T 3   version 3.14U
+    Copyright (C)   ARKI Consulting and Development A/S
+                    Bagsvaerdvej 246 A
+                    DK-2880 Bagsvaerd, Denmark
+ 
+ Using default options.
+ 
+ Reading Data
+ 
+   Iter Phase Ninf   Infeasibility   RGmax    NSB   Step InItr MX OK
+      0   0        1.1641532183E-10 (Input point)
+                                Pre-triangular equations:     3029
+                                Post-triangular equations:     324
+      1   0        0.0000000000E+00 (After pre-processing)
+      2   0        0.0000000000E+00 (After scaling)
+ 
+ ** Feasible solution. Value of objective =    10.0000000000
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+      3   3        1.0000000000E+01 0.0E+00     0 0.0E+00    0 F  T
+      4   3        1.0000000000E+01 0.0E+00     0
+ 
+ ** Optimal solution. There are no superbasic variables.
+ 
+--- Restarting execution
+--- Optimizer_module.gms(949) 0 Mb
+--- Reading solution for model livesMod
+--- Executing after solve: elapsed 0:00:01.852
+--- Optimizer_module.gms(912) 11 Mb
+--- Generating NLP model livesMod
+--- Optimizer_module.gms(949) 14 Mb
+--- LOOPS y2 = 7
+---   3,353 rows  12,677 columns  21,491 non-zeroes
+---   1 nl-code  0 nl-non-zeroes
+--- Optimizer_module.gms(949) 12 Mb
+--- Executing CONOPT: elapsed 0:00:01.892
+--- Optimizer_module.gms(949) 12 Mb
+C O N O P T 3    Jul  4, 2010 23.5.1 WIN 18414.18495 VS8 x86/MS Windows    
+ 
+ 
+    C O N O P T 3   version 3.14U
+    Copyright (C)   ARKI Consulting and Development A/S
+                    Bagsvaerdvej 246 A
+                    DK-2880 Bagsvaerd, Denmark
+ 
+ Using default options.
+ 
+ Reading Data
+ 
+   Iter Phase Ninf   Infeasibility   RGmax    NSB   Step InItr MX OK
+      0   0        1.1641532183E-10 (Input point)
+                                Pre-triangular equations:     3029
+                                Post-triangular equations:     324
+      1   0        0.0000000000E+00 (After pre-processing)
+      2   0        0.0000000000E+00 (After scaling)
+ 
+ ** Feasible solution. Value of objective =    10.0000000000
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+      3   3        1.0000000000E+01 0.0E+00     0 0.0E+00    0 F  T
+      4   3        1.0000000000E+01 0.0E+00     0
+ 
+ ** Optimal solution. There are no superbasic variables.
+ 
+--- Restarting execution
+--- Optimizer_module.gms(949) 0 Mb
+--- Reading solution for model livesMod
+--- Executing after solve: elapsed 0:00:02.136
+--- Optimizer_module.gms(912) 11 Mb
+--- Generating NLP model livesMod
+--- Optimizer_module.gms(949) 14 Mb
+--- LOOPS y2 = 8
+---   3,353 rows  12,677 columns  21,491 non-zeroes
+---   1 nl-code  0 nl-non-zeroes
+--- Optimizer_module.gms(949) 12 Mb
+--- Executing CONOPT: elapsed 0:00:02.179
+--- Optimizer_module.gms(949) 12 Mb
+C O N O P T 3    Jul  4, 2010 23.5.1 WIN 18414.18495 VS8 x86/MS Windows    
+ 
+ 
+    C O N O P T 3   version 3.14U
+    Copyright (C)   ARKI Consulting and Development A/S
+                    Bagsvaerdvej 246 A
+                    DK-2880 Bagsvaerd, Denmark
+ 
+ Using default options.
+ 
+ Reading Data
+ 
+   Iter Phase Ninf   Infeasibility   RGmax    NSB   Step InItr MX OK
+      0   0        1.1641532183E-10 (Input point)
+                                Pre-triangular equations:     3029
+                                Post-triangular equations:     324
+      1   0        0.0000000000E+00 (After pre-processing)
+      2   0        0.0000000000E+00 (After scaling)
+ 
+ ** Feasible solution. Value of objective =    10.0000000000
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+      3   3        1.0000000000E+01 0.0E+00     0 0.0E+00    0 F  T
+      4   3        1.0000000000E+01 0.0E+00     0
+ 
+ ** Optimal solution. There are no superbasic variables.
+ 
+--- Restarting execution
+--- Optimizer_module.gms(949) 0 Mb
+--- Reading solution for model livesMod
+--- Executing after solve: elapsed 0:00:02.369
+--- Optimizer_module.gms(912) 11 Mb
+--- Generating NLP model livesMod
+--- Optimizer_module.gms(949) 14 Mb
+--- LOOPS y2 = 9
+---   3,353 rows  12,677 columns  21,491 non-zeroes
+---   1 nl-code  0 nl-non-zeroes
+--- Optimizer_module.gms(949) 12 Mb
+--- Executing CONOPT: elapsed 0:00:02.409
+--- Optimizer_module.gms(949) 12 Mb
+C O N O P T 3    Jul  4, 2010 23.5.1 WIN 18414.18495 VS8 x86/MS Windows    
+ 
+ 
+    C O N O P T 3   version 3.14U
+    Copyright (C)   ARKI Consulting and Development A/S
+                    Bagsvaerdvej 246 A
+                    DK-2880 Bagsvaerd, Denmark
+ 
+ Using default options.
+ 
+ Reading Data
+ 
+   Iter Phase Ninf   Infeasibility   RGmax    NSB   Step InItr MX OK
+      0   0        1.1641532183E-10 (Input point)
+                                Pre-triangular equations:     3029
+                                Post-triangular equations:     324
+      1   0        0.0000000000E+00 (After pre-processing)
+      2   0        0.0000000000E+00 (After scaling)
+ 
+ ** Feasible solution. Value of objective =    10.0000000000
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+      3   3        1.0000000000E+01 0.0E+00     0 0.0E+00    0 F  T
+      4   3        1.0000000000E+01 0.0E+00     0
+ 
+ ** Optimal solution. There are no superbasic variables.
+ 
+--- Restarting execution
+--- Optimizer_module.gms(949) 0 Mb
+--- Reading solution for model livesMod
+--- Executing after solve: elapsed 0:00:02.613
+--- Optimizer_module.gms(912) 11 Mb
+--- Generating NLP model livesMod
+--- Optimizer_module.gms(949) 14 Mb
+--- LOOPS y2 = 10
+---   3,353 rows  12,677 columns  21,491 non-zeroes
+---   1 nl-code  0 nl-non-zeroes
+--- Optimizer_module.gms(949) 12 Mb
+--- Executing CONOPT: elapsed 0:00:02.653
+--- Optimizer_module.gms(949) 12 Mb
+C O N O P T 3    Jul  4, 2010 23.5.1 WIN 18414.18495 VS8 x86/MS Windows    
+ 
+ 
+    C O N O P T 3   version 3.14U
+    Copyright (C)   ARKI Consulting and Development A/S
+                    Bagsvaerdvej 246 A
+                    DK-2880 Bagsvaerd, Denmark
+ 
+ Using default options.
+ 
+ Reading Data
+ 
+   Iter Phase Ninf   Infeasibility   RGmax    NSB   Step InItr MX OK
+      0   0        1.1641532183E-10 (Input point)
+                                Pre-triangular equations:     3029
+                                Post-triangular equations:     324
+      1   0        0.0000000000E+00 (After pre-processing)
+      2   0        0.0000000000E+00 (After scaling)
+ 
+ ** Feasible solution. Value of objective =    10.0000000000
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+      3   3        1.0000000000E+01 0.0E+00     0 0.0E+00    0 F  T
+      4   3        1.0000000000E+01 0.0E+00     0
+ 
+ ** Optimal solution. There are no superbasic variables.
+ 
+--- Restarting execution
+--- Optimizer_module.gms(949) 0 Mb
+--- Reading solution for model livesMod
+--- Executing after solve: elapsed 0:00:02.856
+--- Optimizer_module.gms(1046) 11 Mb
+
+GDXXRW           Jul  4, 2010 23.5.1 WIN 18414.18495 VS8 x86/MS Windows       
+Input file : C:\Users\Gaming\Documents\Github\Livestock_Model_Dec2016\Model\results\results.gdx
+Output file: C:\Users\Gaming\Documents\Github\Livestock_Model_Dec2016\Model\results\results.xls
+Total time = 281 Ms
+--- Optimizer_module.gms(1047) 11 Mb
+
+GDXXRW           Jul  4, 2010 23.5.1 WIN 18414.18495 VS8 x86/MS Windows       
+Input file : C:\Users\Gaming\Documents\Github\Livestock_Model_Dec2016\Model\results\results.gdx
+Output file: C:\Users\Gaming\Documents\Github\Livestock_Model_Dec2016\Model\results\results.xls
+Total time = 328 Ms
+--- Optimizer_module.gms(1048) 11 Mb
+
+GDXXRW           Jul  4, 2010 23.5.1 WIN 18414.18495 VS8 x86/MS Windows       
+Input file : C:\Users\Gaming\Documents\Github\Livestock_Model_Dec2016\Model\results\results.gdx
+Output file: C:\Users\Gaming\Documents\Github\Livestock_Model_Dec2016\Model\results\results.xls
+Total time = 265 Ms
+--- Optimizer_module.gms(1049) 11 Mb
+
+GDXXRW           Jul  4, 2010 23.5.1 WIN 18414.18495 VS8 x86/MS Windows       
+Input file : C:\Users\Gaming\Documents\Github\Livestock_Model_Dec2016\Model\results\results.gdx
+Output file: C:\Users\Gaming\Documents\Github\Livestock_Model_Dec2016\Model\results\results.xls
+Total time = 250 Ms
+--- Optimizer_module.gms(1050) 11 Mb
+
+GDXXRW           Jul  4, 2010 23.5.1 WIN 18414.18495 VS8 x86/MS Windows       
+Input file : C:\Users\Gaming\Documents\Github\Livestock_Model_Dec2016\Model\results\results.gdx
+Output file: C:\Users\Gaming\Documents\Github\Livestock_Model_Dec2016\Model\results\results.xls
+Total time = 250 Ms
+--- Optimizer_module.gms(1051) 11 Mb
+
+GDXXRW           Jul  4, 2010 23.5.1 WIN 18414.18495 VS8 x86/MS Windows       
+Input file : C:\Users\Gaming\Documents\Github\Livestock_Model_Dec2016\Model\results\results.gdx
+Output file: C:\Users\Gaming\Documents\Github\Livestock_Model_Dec2016\Model\results\results.xls
+Total time = 234 Ms
+--- Optimizer_module.gms(1052) 11 Mb
+
+GDXXRW           Jul  4, 2010 23.5.1 WIN 18414.18495 VS8 x86/MS Windows       
+Input file : C:\Users\Gaming\Documents\Github\Livestock_Model_Dec2016\Model\results\results.gdx
+Output file: C:\Users\Gaming\Documents\Github\Livestock_Model_Dec2016\Model\results\results.xls
+Total time = 282 Ms
+--- Optimizer_module.gms(1053) 11 Mb
+
+GDXXRW           Jul  4, 2010 23.5.1 WIN 18414.18495 VS8 x86/MS Windows       
+Input file : C:\Users\Gaming\Documents\Github\Livestock_Model_Dec2016\Model\results\results.gdx
+Output file: C:\Users\Gaming\Documents\Github\Livestock_Model_Dec2016\Model\results\results.xls
+Total time = 250 Ms
+--- Optimizer_module.gms(1053) 11 Mb
+*** Status: Normal completion
+--- Job Optimizer_module.gms Stop 11/12/17 08:26:26 elapsed 0:00:05.190

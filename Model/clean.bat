@@ -1,0 +1,11 @@
+call del *.$$$
+call del *.lst
+call del *.tmp
+call del *.~gm
+call del *.log
+call del *.~??
+call del *.lxi
+call del xllink.*
+call del *.g0?
+call del *.scr
+call del *.ref
